@@ -1,2 +1,1 @@
-web npm dev
-# web: node index.js
+web: node index.js
