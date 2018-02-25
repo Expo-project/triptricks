@@ -5,12 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.js",
-    "dev": "nodemon ./src/index.js",
-    "deploy": "git add . && git commit -m 'fix' && git push heroku master",
-    "build": "babel src -d dist"
-  },
-  "scripts": {
-    "build": "babel --presets es2015 src -d dist"
+    "dev": "nodemon ./src/index.js"
   },
   "engines": {
     "node": "8.9.4"
