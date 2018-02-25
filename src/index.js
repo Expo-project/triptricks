@@ -11,7 +11,7 @@ const database = require('../database.json')
 helper.logStart()
 
 mongoose.Promise = global.Promise
-mongoose.connect(config.DB_URL, {
+mongoose.connect(config.MONGODB_URL, {
 })
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.log(err))
@@ -24,8 +24,8 @@ const Film = mongoose.model('films')
 const Cinema = mongoose.model('cinemas')
 const User = mongoose.model('users')
 
-// database.films.forEach(f => new Film(f).save().catch(e => console.log(e)))
-// database.cinemas.forEach(c => new Cinema(c).save().catch(e => console.log(e)))
+database.films.forEach(f => new Film(f).save().catch(e => console.log(e)))
+database.cinemas.forEach(c => new Cinema(c).save().catch(e => console.log(e)))
 
 const ACTION_TYPE = {
   TOGGLE_FAV_FILM: 'tff',
